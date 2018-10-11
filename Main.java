@@ -43,7 +43,7 @@ class Main
         System.out.println("*** PRINTING ar2 ***");
         int[] ar2 = new int[n];
         for (int i=0; i<ar2.length; i++)
-        ar2[i]=i;
+        ar2 = ar1.clone();
         for (int i=0; i<ar2.length; i++) 
         System.out.println("ar2["+i+"] = "+ar2[i] );
         
@@ -53,9 +53,9 @@ class Main
         System.out.println("*** PRINTING ar1+ ***");
         int[] arPlus = new int[n];
         for (int i=0; i<arPlus.length; i++)
-        arPlus[i]=i+1;
+        arPlus[i]=ar1[i]+1;
         for (int i=0; i<arPlus.length; i++) 
-        System.out.println("ar1+["+i+"] = "+arPlus[i] );
+        System.out.println("ar1+["+i+"] = "+arPlus[i]);
         /*
          * task 4. Create a new array called ar3.
          *         Copy the elements of ar1 into ar3.  Then do it again
@@ -64,12 +64,14 @@ class Main
          *         ar3: 1 2 3 0 1 2 3
          */
         System.out.println("*** PRINTING ar3 ***");
-        int[] ar3 = new int[n*2];
+        int[] ar3 = new int[arPlus.length *2];
+        for (int i=0; i<arPlus.length; i++)
+        ar3[i]=arPlus[i];
+        for (int i=0; i<arPlus.length; i++) 
+        ar3[i+arPlus.length] = arPlus[i];
         for (int i=0; i<ar3.length; i++)
-        ar3[i]=i;
-        for (int i=0; i<ar3.length; i++) 
-        System.out.println("ar3["+i+"] = "+ar3[i] );
-        
+        System.out.println("ar3["+i+"] = "+ar3[i]);
+
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
