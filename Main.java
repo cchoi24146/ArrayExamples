@@ -76,6 +76,21 @@ class Main
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
+        System.out.println("*** PRINTING ar1<>n ***");
+        int value = ar1[0]; // backup ar1[0] into a bitbucket
+        ar1[0] = ar1[ar1.length-1]; // copy last into ar1[0]. 
+        ar1[ar1.length-1]=value; // copy old value of ar1[0] into last
+
+        
+        // Print out the array
+        for (int i=0 ; i<ar1.length ; i++)
+            System.out.println("ar1<>n[" + i + "] = "+ar1[i]);
+            
+        // The Restoration of the rightful heir
+        value  = ar1[0];
+        ar1[0] = ar1[ar1.length-1];
+        ar1[ar1.length-1] = value;
+        
         
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
@@ -84,7 +99,20 @@ class Main
          *          the indices are multiples of 3
          *         
          */
+        System.out.println("*** PRINTING ar1(6a) ***");
         
+        for (int i=1; i<ar1.length-1; i++)
+            System.out.println("ar1(6a)[" + i + "] = "+ar1[i]);
+            
+        System.out.println("*** PRINTING ar1(6b) ***");
+        for (int i=1; i<ar1.length-1; i++)
+            if (ar1[i]%2==1)
+                System.out.println("ar1(6b)[" + i + "] = "+ar1[i]);
+                
+        System.out.println("*** PRINTING ar1(6c) ***");
+        for (int i=0; i<ar1.length-1; i++)
+            if (ar1[i]%3==0)
+                System.out.println("ar1(6c)[" + i + "] = "+ar1[i]);
         /*
          * Task 7.  For each element in ar1, 
          *          If the element is even: leave alone
@@ -96,7 +124,9 @@ class Main
          *          ar[2]=30
          *          ar[3]=4
          */
-        
+        System.out.println("*** PRINTING ar1(7) ***");
+        for (int i=0; i<ar1.length; i++)
+            System.out.println(ar1[i]);
          /*
           * Task 8
           *    Create an array called ar2odds
