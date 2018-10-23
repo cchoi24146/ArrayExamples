@@ -184,7 +184,8 @@ class Main
          * old   ar4: 1 3 5 7 9
          * new   ar4  9 1 3 5 7
          */
-        
+        System.out.println(" ** Task 9 **");
+           
         
         /*
          * Task 11.  Reverse the order of elements in ar2
