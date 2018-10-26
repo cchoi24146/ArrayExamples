@@ -264,12 +264,14 @@ class Main
           ar5[13]="a";
           ar5[14]="new";
           ar5[15]="nation";
-          /*for (int i=0; i<16; i++) {
+          int count = 0;
+          for (int i=0; i<16; i++) {
               int f = ar5[i].length();
-              ar6[i]=f;
               if (f>5) {
-                  System.out.println(
-           *\
+                  count++;
+                }
+            }
+            System.out.println(count);
         /*
          * Task 13
          * Create an array called monsterArray of 5 Monsters.
@@ -284,7 +286,14 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
-        
+        String[] monsterArray={ "Cookie",  "Grover",  "Oscar the Grouch" , "Elmo", "Rosita"};
+        /*String s;
+         for (int i=0; i<5; i++) {
+             char c = monsterArray[i].charAt(0).toLowerCase();
+             if (c=="a"||c=="e"||c=="i"||c=="o"||c=="u") {
+                 System.out.println(monsterArray[i]);
+                }
+            }
          /*
           * Task 14
           * Create an array of integers from 3 to 94 and call it arx
