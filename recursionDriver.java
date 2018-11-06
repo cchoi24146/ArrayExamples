@@ -3,12 +3,17 @@ public class recursionDriver {
         int c = counted(9);
         System.out.println(c);
         }
+        
         public static int counted(int n) {
-            if (n==0) 
+        if (n<=0) 
             return 0;
-            else if(n%2==0)
-            return n-1;
-            
-            return n+counted(n-1);
+        if (n%2==0)
+            return n+counted(n-2);
+        if (n%2==1){
+            n-=1;
+            return n+counted(n-2);
+        }            
+
+            return 0;
     }
 }
