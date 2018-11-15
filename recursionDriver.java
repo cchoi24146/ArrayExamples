@@ -1,4 +1,4 @@
-public class recursionDriver {
+public class RecursionDriver {
     public static void main(String[] args) {
         int c = counted(9);
         System.out.println(c);
